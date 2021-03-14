@@ -1,0 +1,83 @@
+<div class="main-container">
+    <header class="header header-6">
+        <h2 class="mainHeader">Gleason</h2>
+    </header>
+    <div class="content-container">
+        <nav class="sidenav">
+            <ul class="nav-list">
+                <a class="nav-link"><span style="padding: 5px;"><i class="pi pi-user"
+                            style="font-size: 20px"></i></span><span style="padding: 5px;">
+                        {{loggedInUser}}</span></a>
+
+            </ul>
+        </nav>
+        <div class="content-area">
+
+            <div class="clr-row">
+                <div class="clr-col-2">
+                    <button class="dashButton" pButton type="button" label="View" (click)="view()"></button>
+                </div>
+                <div class="clr-col-2">
+                    <button class="dashButton" label="Add" pButton type="button" (click)="add()"></button>
+                </div>
+                <!-- <button (click)="update()">Update</button>
+                                <button (click)="delete()">Delete</button> -->
+
+            </div>
+            <div class="clr-row">
+                <app-addcustomer *ngIf="isAdd" (newItemEvent)="addItem($event)"></app-addcustomer>
+            </div>
+            <div class="clr-row">
+                <app-updatecustomer [customerDetails]="selectedCust" [custList]="customerList"
+                    (updateItemEvent)="updateList($event)" *ngIf="isUpdate">
+                </app-updatecustomer>
+            </div>
+            <div class="clr-row">
+                <app-viewcustomer [customers]="customerList" (deleteItem)="delete($event)" (updateItem)="update($event)"
+                    *ngIf="isView"></app-viewcustomer>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<p-panel>
+    <ng-template pTemplate="header">
+        <h2 class="mainHeader">Gleason</h2>
+    </ng-template>
+    <!-- <p-splitter [style]="{'height': '100%'}" [panelSizes]="[25,75]" class="splitter">
+        <ng-template pTemplate> -->
+    <span style="padding: 5px;"><i class="pi pi-user" style="font-size: 20px"></i></span><span style="padding: 5px;">
+        {{loggedInUser}}</span>
+    <!-- </ng-template>
+        <ng-template pTemplate> -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-3">
+                <button class="dashButton" pButton type="button" label="View" (click)="view()"></button>
+            </div>
+            <div class="col-md-3">
+                <button class="dashButton" label="Add" pButton type="button" (click)="add()"></button>
+            </div>
+            <!-- <button (click)="update()">Update</button>
+                    <button (click)="delete()">Delete</button> -->
+
+        </div>
+        <div class="row">
+            <app-addcustomer *ngIf="isAdd" (newItemEvent)="addItem($event)"></app-addcustomer>
+        </div>
+        <div class="row">
+            <app-updatecustomer [customerDetails]="selectedCust" [custList]="customerList"
+                (updateItemEvent)="updateList($event)" *ngIf="isUpdate">
+            </app-updatecustomer>
+        </div>
+        <div class="row">
+            <app-viewcustomer [customers]="customerList" (deleteItem)="delete($event)" (updateItem)="update($event)"
+                *ngIf="isView"></app-viewcustomer>
+        </div>
+    </div>
+    <!-- </ng-template>
+    </p-splitter> -->
+
+
+</p-panel>

@@ -1,0 +1,13 @@
+<h4>Update Customer Details</h4>
+<div>Email ID:</div>
+<div><input pInputText type="text" [(ngModel)]="customerDetails.emailId"></div>
+<div>First Name:</div>
+<div><input pInputText type="text" [(ngModel)]="customerDetails.firstName"></div>
+<div>Last Name:</div>
+<div><input pInputText type="text" [(ngModel)]="customerDetails.lastName"></div>
+<div>Roles:</div>
+<div><input pInputText type="text" [(ngModel)]="customerDetails.roles"></div>
+
+<div style="padding-top:5px">
+    <button class="dashButton p-button-sm" [disabled]="checkData()" pButton label="Update" (click)="submit()"></button>
+</div>

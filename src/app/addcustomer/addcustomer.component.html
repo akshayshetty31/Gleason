@@ -1,0 +1,13 @@
+<h4>Add New Customer</h4>
+<div>Email ID:</div>
+<div><input type="text" pInputText [(ngModel)]="customerDetails.emailId"></div>
+<div>First Name:</div>
+<div><input type="text" pInputText [(ngModel)]="customerDetails.firstName"></div>
+<div>Last Name:</div>
+<div><input type="text" pInputText [(ngModel)]="customerDetails.lastName"></div>
+<div>Roles:</div>
+<div><input type="text" pInputText [(ngModel)]="customerDetails.roles"></div>
+
+<div style="padding-top:5px">
+    <button class="dashButton p-button-sm" pButton label="Add" [disabled]="checkData()" (click)="submit()"></button>
+</div>

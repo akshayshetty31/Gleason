@@ -1,0 +1,15 @@
+.field-margin {
+    margin-top :10px;
+}
+.loginContainer {
+    text-align: center;
+    background-color:whitesmoke;
+    margin-top:5%;
+    margin-left:20%;
+    margin-right:20%;
+}
+.mainHeader {
+    color:dodgerblue;
+    margin-top: 0px;
+    font-weight: bold;
+}

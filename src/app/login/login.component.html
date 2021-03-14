@@ -1,0 +1,22 @@
+<div class="loginContainer">
+    <h2 class="mainHeader">GEMS Cloud Web Application</h2>
+    <div class="field-margin">
+        <span class="p-input-icon-right">
+            <i class="pi pi-user"></i>
+            <input type="text" placeholder="User Name" pInputText [(ngModel)]="userName" />
+        </span>
+        <!-- <input type="text" [(ngModel)]="userName" /> -->
+    </div>
+
+    <div class="field-margin">
+
+        <span class="p-input-icon-right">
+            <i class="pi pi-lock"></i>
+            <input type="password" placeholder="Password" pInputText [(ngModel)]="passWord" />
+        </span>
+
+    </div>
+    <div class="field-margin">
+        <button pButton type="button" label="Sign In" [disabled]="checkData()" (click)="verifyLogin()"></button>
+    </div>
+</div>

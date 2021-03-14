@@ -1,0 +1,20 @@
+/* @import "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"; */
+.mainHeader {
+    color:dodgerblue;
+    margin-top: 0px;
+    font-weight: bold;
+}
+:host ::ng-deep .p-panel .p-panel-header{
+    max-height: 40px !important;
+    
+}
+:host ::ng-deep .p-panel .p-panel-content {
+padding: 0px !important;
+}
+.splitter{
+    margin: 0px;
+}
+.dashButton {
+    margin:5px;
+    height: 30px;
+}
